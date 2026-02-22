@@ -3,7 +3,7 @@
 
 Inspired by Alysa Liu's interview about her top 5 favourite anime.
 
-I built particle and geometric visualizations with gesture-based motion control for 
+I built particle and geometric visualizations with gesture-based motion control for the following anime:
 
 1. Gojo's Domain Expansion: Infinite Void
   - Effect: Cross third/middle finger behind second/index finger to create blue sphere with particles then uncross to "release" spell and dissolve sphere particles)
@@ -14,3 +14,5 @@ I built particle and geometric visualizations with gesture-based motion control 
 3. Madoka Magica
   - Effect: Cross both hands with both palms visible and facing camera to trigger pink and gold magical rune gate particle visualization 
   - Reference video: https://www.youtube.com/watch?v=m3DjEiwaDsg
+
+Alysa Liu's interview that inspired this whole coding project: https://www.youtube.com/shorts/wZbGHt6Y6JE
