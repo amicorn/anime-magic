@@ -11,8 +11,8 @@
         #skeleton-canvas { position: absolute; top: 0; left: 0; width: 100vw; height: 100vh; z-index: 3; transform: scaleX(-1); pointer-events: none; }
         #three-canvas { position: absolute; top: 0; left: 0; width: 100vw; height: 100vh; z-index: 5; pointer-events: none; }
         #ui { position: absolute; top: 5%; width: 100%; text-align: center; color: #fff; pointer-events: none; z-index: 10; text-shadow: 0 0 15px rgba(0,0,0,0.8); }
-        h1 { font-size: 2.2rem; margin: 0; letter-spacing: 12px; font-weight: 900; background: linear-gradient(to bottom, #fdf5e6, #d4af37); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        #technique-name { font-size: 1.1rem; color: #d4af37; margin-top: 8px; font-weight: bold; letter-spacing: 4px; }
+        h1 { font-size: 1.5rem; margin: 0; letter-spacing: 12px; font-weight: 900; background: linear-gradient(to bottom, #fdf5e6, #d4af37); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        #technique-name { font-size: 2.0rem; color: #d4af37; margin-top: 8px; font-weight: bold; letter-spacing: 4px; }
         #status { position: absolute; bottom: 20px; left: 20px; color: #aaa; font-size: 10px; letter-spacing: 2px; z-index: 10; }
     </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
@@ -26,7 +26,7 @@
     <div id="three-canvas"></div>
     <div id="status">INITIALIZING...</div>
     <div id="ui">
-        <h1>葬送のフリーレン</h1> 
+        <h1>ANIME MAGIC WITH COMPUTER VISION </h1> 
         <div id="technique-name">SENSING...</div>
     </div>
 
@@ -149,8 +149,7 @@
                 posAttr.array[idx] += (tx - posAttr.array[idx]) * 0.15;
                 posAttr.array[idx+1] += (ty - posAttr.array[idx+1]) * 0.15;
                 posAttr.array[idx+2] += (tz - posAttr.array[idx+2]) * 0.15;
-            } else if (currentTech === 'rune') {
-                // Keep the "rune" targets relative to handPos every frame
+            } else if (currentTech === 'rune' || currentTech === 'fangirl') {
                 posAttr.array[idx] += (handPos.x + targetPositions[idx] - posAttr.array[idx]) * 0.12;
                 posAttr.array[idx+1] += (handPos.y + targetPositions[idx+1] - posAttr.array[idx+1]) * 0.12;
                 posAttr.array[idx+2] += (targetPositions[idx+2] - posAttr.array[idx+2]) * 0.12;
@@ -197,14 +196,13 @@
             } else if (type === 'kon') {
                 targetColors[idx] = 1.0; targetColors[idx+1] = 0.4; targetColors[idx+2] = 0.0;
             } else if (type === 'rune') {
-                // Logic from Frieren Code: Top Circle Gold, Pillars Pink
                 if (i < COUNT * 0.4) {
                     const angle = (i / (COUNT * 0.4)) * Math.PI * 2;
                     const r = 30;
                     targetPositions[idx] = Math.cos(angle) * r;
                     targetPositions[idx+1] = 25;
                     targetPositions[idx+2] = Math.sin(angle) * r;
-                    targetColors[idx] = 1.0; targetColors[idx+1] = 0.8; targetColors[idx+2] = 0.2; // Gold
+                    targetColors[idx] = 1.0; targetColors[idx+1] = 0.8; targetColors[idx+2] = 0.2;
                 } else {
                     const pillarIdx = i % 4;
                     const offsets = [{x:18, z:18}, {x:-18, z:18}, {x:18, z:-18}, {x:-18, z:-18}];
@@ -212,8 +210,16 @@
                     targetPositions[idx] = offsets[pillarIdx].x + (Math.random()-0.5)*4;
                     targetPositions[idx+1] = -h;
                     targetPositions[idx+2] = offsets[pillarIdx].z + (Math.random()-0.5)*4;
-                    targetColors[idx] = 1.0; targetColors[idx+1] = 0.1; targetColors[idx+2] = 0.5; // Pink
+                    targetColors[idx] = 1.0; targetColors[idx+1] = 0.1; targetColors[idx+2] = 0.5;
                 }
+            } else if (type === 'fangirl') {
+                const t = (i / COUNT) * Math.PI * 2;
+                const x = 16 * Math.pow(Math.sin(t), 3);
+                const y = 13 * Math.cos(t) - 5 * Math.cos(2*t) - 2 * Math.cos(3*t) - Math.cos(4*t);
+                targetPositions[idx] = x * 1.8;
+                targetPositions[idx+1] = y * 1.8;
+                targetPositions[idx+2] = (Math.random() - 0.5) * 10;
+                targetColors[idx] = 1.0; targetColors[idx+1] = 0.1; targetColors[idx+2] = 0.3; // Pink-Red
             } else {
                 const angle = (i / COUNT) * Math.PI * 2;
                 const rad = 20 + Math.random() * 10;
@@ -224,8 +230,14 @@
             }
         }
         
-        const names = { gojo: "領域展開: 無量空処", kon: "コン (KON)", rune: "ELDRITCH RUNE GATE", neutral: "SENSING MANA..." };
-        const colors = { gojo: "#00d4ff", kon: "#ff6600", rune: "#ff0077", neutral: "#d4af37" };
+        const names = { 
+            gojo: "GOJO'S DOMAIN EXPANSION: INFINITE VOID", 
+            kon: "コン (KON)", 
+            rune: "MADOKA MAGICA MAGICAL GIRL TRANSFORMATION", 
+            fangirl: "FANGIRL MODE: PINK HEART CRUSH",
+            neutral: "SENSING MANA..." 
+        };
+        const colors = { gojo: "#00d4ff", kon: "#ff6600", rune: "#ff0077", fangirl: "#ff3366", neutral: "#d4af37" };
         nameEl.innerText = names[type];
         nameEl.style.color = colors[type];
     }
@@ -266,8 +278,6 @@
         canvasCtx.clearRect(0, 0, canvasElement.width, canvasElement.height);
         if (results.multiHandLandmarks && results.multiHandLandmarks.length > 0) {
             let detected = 'neutral';
-            
-            // Average center for two hands or single hand position
             let centerX = 0, centerY = 0;
             results.multiHandLandmarks.forEach(h => {
                 centerX += h[9].x; centerY += h[9].y;
@@ -279,9 +289,16 @@
             if (results.multiHandLandmarks.length === 2) {
                 const h1 = results.multiHandLandmarks[0];
                 const h2 = results.multiHandLandmarks[1];
-                const dist = Math.hypot(h1[9].x - h2[9].x, h1[9].y - h2[9].y);
-                // Rune Gate: Two hands near each other
-                if (dist < 0.25) detected = 'rune';
+                
+                // Detection for Fangirl Heart: Thumbs (4) touching and Index (8) touching
+                const thumbDist = Math.hypot(h1[4].x - h2[4].x, h1[4].y - h2[4].y);
+                const indexDist = Math.hypot(h1[8].x - h2[8].x, h1[8].y - h2[8].y);
+                
+                if (thumbDist < 0.1 && indexDist < 0.1) {
+                    detected = 'fangirl';
+                } else if (Math.hypot(h1[9].x - h2[9].x, h1[9].y - h2[9].y) < 0.25) {
+                    detected = 'rune';
+                }
             } else {
                 const h = results.multiHandLandmarks[0];
                 const distIndexMiddle = Math.hypot(h[8].x - h[12].x, h[8].y - h[12].y);
