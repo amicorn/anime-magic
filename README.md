@@ -1,34 +1,65 @@
-# olympics-anime
+
+# Olympics Anime: Bring Anime to Life with Gesture-Based Magic Visualizations
+
 2/21/26
 
-- by Amy Ouyang (amicornz@) 2026
+**By Amy Ouyang (amicornz@) 2026**
 
-Inspired by Alysa Liu's interview about her top 5 favourite anime.
+This project features complex particle and geometric visualizations with gesture-based motion control, bringing iconic anime moments to life through code.
 
-## Demo
-computer vision program visualization for Gojo's Infinite Void spell from Jujutsu Kaisen
+Inspired by Alysa Liu's interview about her top 5 favorite anime.
 
-https://github.com/user-attachments/assets/be6f739f-2c15-40f6-bc8a-4ded08156fff
+## 🎬 Demo
 
-## Screenshot
+A computer vision-powered visualization for Gojo's **Infinite Void** spell from *Jujutsu Kaisen*.
 
-<img src="./screenshots/computer_vision_gojo_me_ss.png" alt="infinite void blue sphere" width="400">
+[Watch the Demo](https://github.com/user-attachments/assets/be6f739f-2c15-40f6-bc8a-4ded08156fff)
 
+## 📸 Screenshot
 
-## Magic spells list
+<p align="left">
+  <img src="./screenshots/computer_vision_gojo_me_ss.png" alt="Infinite Void Blue Sphere" width="600">
+</p>
+
+## ✨ Magic Spells List
+
+This project features complex particle and geometric visualizations with gesture-based motion control, bringing iconic anime moments to life through code.
+
 I built particle and geometric visualizations with gesture-based motion control for the following anime:
 
-1. Gojo's Domain Expansion: Infinite Void
-  - Effect: Cross third/middle finger behind second/index finger to create blue sphere with particles then uncross to "release" spell and dissolve sphere particles)
-  - Reference video: https://www.youtube.com/watch?v=nmvkhLz8t7I
-2. Chainsaw Man: Aki's Kon
-  - Effect: Touch third/middle and fourth/ring fingers to thumb, keep second/index and fifth/pinky fingers raised up to make a dog/kon hand sign and trigger orange geometric triangular prism shape with swirling orange particles"
-  - Reference video: https://www.youtube.com/watch?v=IZ9yPVlwgzE
-3. Madoka Magica
-  - Effect: Cross both hands with both palms visible and facing camera to trigger pink and gold magical rune gate particle visualization 
-  - Reference video: https://www.youtube.com/watch?v=m3DjEiwaDsg
-4. Hearts
-  - Effect: Make a heart in any way with both hands, this should trigger a cute pink heart <3
+### 1. Gojo's Domain Expansion: Infinite Void (*Jujutsu Kaisen*)
+- **Effect**: Crossing your third (middle) finger behind your second (index) finger creates a majestic blue sphere surrounded by swirling particles. Uncrossing your fingers "releases" the spell, causing the sphere and particles to dissolve and expand.
+- **Reference**: [Gojo Uses Infinite Void](https://www.youtube.com/watch?v=nmvkhLz8t7I)
 
-## Inspiration
-Alysa Liu's interview that inspired this whole coding project: https://www.youtube.com/shorts/wZbGHt6Y6JE
+### 2. Chainsaw Man: Aki's Kon
+- **Effect**: Touching your third (middle) and fourth (ring) fingers to your thumb while keeping your second (index) and fifth (pinky) fingers raised creates the "Kon" hand sign. This triggers an orange geometric triangular prism and a flurry of orange particles.
+- **Reference**: [Aki Uses Kon](https://www.youtube.com/watch?v=IZ9yPVlwgzE)
+
+### 3. Madoka Magica: Magical Girl Transformation
+- **Effect**: Crossing both hands with palms visible to the camera triggers a complex pink and gold magical rune gate particle visualization.
+- **Reference**: [Madoka's Transformation](https://www.youtube.com/watch?v=m3DjEiwaDsg)
+
+### 4. Hearts to fangirl over Alysa Liu hehe
+- **Effect**: Make a heart in any way with both hands, this will trigger a cute pink heart <3
+
+## 🛠️ Technical Stack
+
+I used the following web technologies to create this real-time interactive program:
+
+- **Frontend**: HTML5, CSS3, JavaScript (ES6+)
+- **Computer Vision**: [MediaPipe Hands](https://google.github.io/mediapipe/solutions/hands.html) for high-fidelity hand and finger tracking.
+- **3D Graphics**: [Three.js](https://threejs.org/) for rendering complex particle systems and geometric shapes.
+- **Mathematics**: Custom algorithms for gesture recognition, particle physics, and coordinate mapping from 2D camera space to 3D world space.
+
+## 🚀 Features
+
+- **Real-time Gesture Recognition**: Instantaneous detection of complex hand signs with high accuracy.
+- **Dynamic Particle Systems**: Thousands of particles reacting in real-time to your hand's position and orientation.
+- **Immersive Visuals**: High-fidelity 3D models and effects inspired by iconic anime cinematography.
+- **Interactive Motion Control**: Control the size, position, and behavior of spells through intuitive physical movement.
+
+## 💡 Inspiration
+
+This project was inspired by **Alysa Liu's** relatable enthusiasm for anime in her [recent interview](https://www.youtube.com/shorts/wZbGHt6Y6JE), where she shared her top 5 favorites, including *Jujutsu Kaisen*, *Chainsaw Man*, and *Madoka Magica*.
+
+---
