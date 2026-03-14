@@ -12,8 +12,8 @@ Inspired by Alysa Liu's interview about her top 5 favorite anime.
 **Website: https://amicorn.github.io/olympics-anime/**
 
 Full demos:
-- Link to full demo of JJK, Chainsaw Man, and Madoka Magica spells: https://www.instagram.com/reel/DVHdSqrEvpS/
-- Link to demo with Gojo JJK anime OST music video: https://www.instagram.com/reel/DVHkibCkh8b/
+- [Computer vision demo of JJK, Chainsaw Man, and Madoka Magica spells](https://www.instagram.com/reel/DVHdSqrEvpS/)
+- [Computer vision demo of Gojo JJK anime OST music video](https://www.instagram.com/reel/DVHkibCkh8b/)
 
 ## 🎬 Demo
 
