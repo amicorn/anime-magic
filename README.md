@@ -5,7 +5,8 @@
 
 Inspired by Alysa Liu's interview about her top 5 favourite anime.
 
-## Demo of Gojo from Jujutsu Kaisen
+## Demo
+computer vision program visualization for Gojo's Infinite Void spell from Jujutsu Kaisen
 
 https://github.com/user-attachments/assets/be6f739f-2c15-40f6-bc8a-4ded08156fff
 
