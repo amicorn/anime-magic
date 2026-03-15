@@ -1,4 +1,5 @@
 // mathematical definitions for the magic effects :)
+// defines the mathematical patterns for the different magic techniques. It provides a function that takes the current technique type, particle index, and hand position, and returns the target position and color for each particle in the scene. The patterns are designed to create visually distinct effects for each technique, such as a swirling sphere for "gojo" or a heart shape for "fangirl".
 
 import { CONFIG } from './state.js';
 

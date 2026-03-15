@@ -1,4 +1,5 @@
 // config and shared variables
+// defines the configuration for the hand tracking and magic effects, including the mapping of finger landmarks and the different techniques. It also contains a global state object that is updated based on the hand tracking results and used by the magic scene to render the appropriate effects.
 
 export const CONFIG = {
     COUNT: 30000,
