@@ -54,7 +54,7 @@ This project maps real-time MediaPipe hand landmarks to Three.js coordinate syst
 | :---: | :---: | :---: | :---: |
 | <img src="screenshots/madoka magica cross hands inital.jpeg" width="160"> | <img src="screenshots/madoka magica cross hands.jpeg" width="160"> | <img src="screenshots/madoka magica cross hands 2.jpeg" width="160"> | <img src="screenshots/madoka magica demo cover.jpeg" width="160"> |
 | <img src="screenshots/madoka magica start spell.jpeg" width="160"> | <img src="screenshots/madoka magica spell middle.jpeg" width="160"> | <img src="screenshots/madoka magica pillars and sphere.jpeg" width="160"> | <img src="screenshots/madoka magica pillars with finger tracking.jpeg" width="160"> |
-| <img src="screenshots/madoka magica release state.jpeg" width="160"> | <img src="screenshots/madoka magica release spell'.jpeg" width="160"> | <img src="screenshots/computer vision program for alysa liu.jpeg" width="160"> | |
+| <img src="screenshots/madoka magica release state.jpeg" width="160"> | <img src="screenshots/madoka magica release spell.jpeg" width="160"> | <img src="screenshots/computer vision program for alysa liu.jpeg" width="160"> | |
 | **Initial Pose** | **Gate Trigger** | **Pillar Physics** | **Release Phase** |
 
 ---
@@ -63,7 +63,7 @@ This project maps real-time MediaPipe hand landmarks to Three.js coordinate syst
 | | | | |
 | :---: | :---: | :---: | :---: |
 | <img src="screenshots/forming particle heart.jpeg" width="160"> | <img src="screenshots/geometric purple heart.jpeg" width="160"> | <img src="screenshots/geometric purple heart 2.jpeg" width="160"> | <img src="screenshots/geometric purple heart with sphere.jpeg" width="160"> |
-| <img src="screenshots/math hearts for alysa.png" width="160"> |<img src="screenshots/gathering mana base state.png" width="160"> | | |
+| <img src="screenshots/math hearts for alysa.png" width="160"> |<img src="screenshots/pink particle heart.jpeg" width="160"> | <img src="screenshots/gathering mana base state.jpeg" width="160">| <img src="screenshots/forming particle heart.jpeg" width="160">|
 | **Heart Gesture** | **Particle Heart** | **Depth Mapping** | **Targeting** |
 
 
